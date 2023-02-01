@@ -2,12 +2,10 @@ package ru.netology.radio;
 
 public class Radio {
     private int currentNumber;
-    private int currentVolume;
 
     public int getCurrentNumber() {
         return currentNumber;
     }
-
 
     public int setCurrentNumber(int newCurrentNumber) {
 
@@ -18,6 +16,24 @@ public class Radio {
         }
         currentNumber = newCurrentNumber;
         return currentNumber;
+    }
+
+    public int increaseVolume(int currentVolume) {
+        if (currentVolume < 9) {
+            currentVolume = currentVolume + 1;
+        } else {
+            currentVolume = 9;
+        }
+        return currentVolume;
+    }
+
+    public int decreaseVolume(int currentVolume) {
+        if (currentVolume > 0) {
+            currentVolume = currentVolume - 1;
+        } else {
+            currentVolume = 0;
+        }
+        return currentVolume;
     }
 
     public int next(int number) {
@@ -38,22 +54,6 @@ public class Radio {
         return number;
     }
 
-    public int plus(int volume) {
-        if (volume >= 9) {
-            volume = 9;
-        } else {
-            volume = volume + 1;
-        }
-        return volume;
-    }
 
-    public int minus(int volume) {
-        if (volume <= 0) {
-            volume = 0;
-        } else {
-            volume = volume - 1;
-        }
-        return volume;
-    }
 }
 
