@@ -29,7 +29,7 @@ public class TestRadio {
     public void moveToNextNumber() {
         Radio num = new Radio();
         int expected = 8;
-        int actual = num.Next(7);
+        int actual = num.next(7);
         Assertions.assertEquals(expected, actual);
 
     }
@@ -38,7 +38,7 @@ public class TestRadio {
     public void moveToNextIfNumberAboveMax() {
         Radio num = new Radio();
         int expected = 0;
-        int actual = num.Next(9);
+        int actual = num.next(9);
         Assertions.assertEquals(expected, actual);
 
     }
@@ -47,7 +47,7 @@ public class TestRadio {
     public void moveToPrevNumber() {
         Radio num = new Radio();
         int expected = 6;
-        int actual = num.Prev(7);
+        int actual = num.prev(7);
         Assertions.assertEquals(expected, actual);
 
     }
@@ -56,7 +56,7 @@ public class TestRadio {
     public void moveToPrevIfNumberUnderMin() {
         Radio num = new Radio();
         int expected = 9;
-        int actual = num.Prev(0);
+        int actual = num.prev(0);
         Assertions.assertEquals(expected, actual);
 
     }
@@ -64,7 +64,7 @@ public class TestRadio {
     public void moveToPlus() {
         Radio value = new Radio();
         int expected = 8;
-        int actual = value.Plus(7);
+        int actual = value.plus(7);
         Assertions.assertEquals(expected, actual);
 
     }
@@ -72,7 +72,7 @@ public class TestRadio {
     public void moveToPlusAboveMax() {
         Radio value = new Radio();
         int expected = 9;
-        int actual = value.Plus(9);
+        int actual = value.plus(9);
         Assertions.assertEquals(expected, actual);
 
     }
@@ -80,7 +80,7 @@ public class TestRadio {
     public void moveToMinus() {
         Radio value = new Radio();
         int expected = 6;
-        int actual = value.Minus(7);
+        int actual = value.minus(7);
         Assertions.assertEquals(expected, actual);
 
     }
@@ -88,7 +88,7 @@ public class TestRadio {
     public void moveToMinusUnderMin() {
         Radio value = new Radio();
         int expected = 0;
-        int actual = value.Minus(0);
+        int actual = value.minus(0);
         Assertions.assertEquals(expected, actual);
 
     }
